@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/cost-accounting-statistics.iml" filepath="$PROJECT_DIR$/.idea/cost-accounting-statistics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cost-accounting-statistics-api/cost-accounting-statistics-api.iml" filepath="$PROJECT_DIR$/cost-accounting-statistics-api/cost-accounting-statistics-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cost-accounting-statistics-core/cost-accounting-statistics-core.iml" filepath="$PROJECT_DIR$/cost-accounting-statistics-core/cost-accounting-statistics-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cost-accounting-statistics-web/cost-accounting-statistics-web.iml" filepath="$PROJECT_DIR$/cost-accounting-statistics-web/cost-accounting-statistics-web.iml" />
+    </modules>
+  </component>
+</project>
