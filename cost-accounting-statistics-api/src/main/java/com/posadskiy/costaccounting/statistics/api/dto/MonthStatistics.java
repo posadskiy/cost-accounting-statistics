@@ -5,9 +5,9 @@ import lombok.Data;
 import java.util.Map;
 
 @Data
-public class DbMonthStatistics {
+public class MonthStatistics {
 	private Integer year;
 	private String month;
-	private Map<String, DbStatisticCategory> purchaseCategories;
-	private Map<String, DbStatisticCategory> incomeCategories;
+	private Map<String, StatisticCategory> purchaseCategories;
+	private Map<String, StatisticCategory> incomeCategories;
 }
