@@ -2,6 +2,7 @@ package com.posadskiy.costaccounting.statistics.core.controller.impl;
 
 import com.posadskiy.costaccounting.statistics.core.controller.ProjectController;
 import com.posadskiy.costaccounting.statistics.core.db.ProjectRepository;
+import com.posadskiy.costaccounting.statistics.core.db.model.DbMonthStatistic;
 import com.posadskiy.costaccounting.statistics.core.db.model.DbProject;
 import com.posadskiy.costaccounting.statistics.core.exception.ProjectDoesNotExistException;
 import lombok.extern.slf4j.Slf4j;
@@ -10,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Slf4j
 @Component
@@ -41,8 +40,12 @@ public class ProjectControllerImpl implements ProjectController {
     @Override
     public List<String> getMonths(String id) {
         DbProject project = getProject(id);
+        final Map<String, DbMonthStatistic> statistics = project.getStatistics();
+        
+        if (CollectionUtils.isEmpty(statistics)) return new ArrayList<>();
+
         final List<String> months = (List<String>) CollectionUtils.arrayToList(
-            project.getStatistics().keySet().toArray()
+            statistics.keySet().toArray()
         );
         Collections.reverse(months);
         return months;

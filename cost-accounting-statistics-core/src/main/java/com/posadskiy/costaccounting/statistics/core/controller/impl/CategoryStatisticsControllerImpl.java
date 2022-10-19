@@ -38,7 +38,7 @@ public class CategoryStatisticsControllerImpl implements CategoryStatisticsContr
     }
 
     @Override
-    public void increasePurchaseToStatisticCategory(@NotNull final User foundUser, @NotNull final Purchase dbPurchase) {
+    public void increasePurchaseToStatisticCategory(@NotNull final User foundUser, @NotNull final MoneyAction dbPurchase) {
         /*final String monthAndYear = Utils.getMonthAndYear(dbPurchase.getDate());
         final DbMonthStatistic statisticMonth = getDbMonthStatisticByUser(foundUser, monthAndYear);
 
@@ -55,7 +55,7 @@ public class CategoryStatisticsControllerImpl implements CategoryStatisticsContr
     }
 
     @Override
-    public void increaseIncomeToStatisticCategory(@NotNull final User foundUser, @NotNull final Income dbIncome) {
+    public void increaseIncomeToStatisticCategory(@NotNull final User foundUser, @NotNull final MoneyAction dbIncome) {
         /*final String monthAndYear = Utils.getMonthAndYear(dbIncome.getDate());
         final DbMonthStatistic statisticMonth = getDbMonthStatisticByUser(foundUser, monthAndYear);
 
